@@ -1,0 +1,9 @@
+{
+    "method": "GET",
+    "path": "/api/info",
+    "date": "2020-02-28T06:47:35.159Z"
+} {
+    "method": "POST",
+    "path": "/api/info",
+    "date": "2020-02-28T06:47:56.577Z"
+}{"method":"GET","path":"/api/info","date":"2020-02-28T06:56:56.073Z"}{"method":"POST","path":"/api/info","date":"2020-02-28T07:01:58.347Z"}

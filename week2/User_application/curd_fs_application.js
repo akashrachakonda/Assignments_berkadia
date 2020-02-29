@@ -2,6 +2,7 @@ const Joi=require('joi');
 const express=require('express');
 const app=express();
 
+
 //const util=require('util');
 
 const fs=require('fs');
@@ -9,10 +10,19 @@ const fs=require('fs');
 app.use(express.json());
 
 const readMe=fs.readFileSync('courses.json','utf-8');
+
 //console.log(typeof(read));
 //console.log(typeof(JSON.parse(read)));
 
 const path='/api/info/';
+
+const req_info=fs.readFileSync('request_log.json','utf-8');
+
+app.use(function(req,res,next){
+    fs.appendFileSync('./request_log.json',JSON.stringify({"method":req.method,"path":req.path,"date":new Date()}));
+    next();
+});
+
 
 app.get(path,(req,res)=>{
     
